@@ -60,6 +60,7 @@
   width: 4.8rem;
   color: #333;
 }
+/* attributes selector */
 .icon-mobile-nav[name="close-outline"] {
   display: none;
 }
