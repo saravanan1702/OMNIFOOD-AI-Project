@@ -1,0 +1,262 @@
+/* --- 01 THPOGRAPHY SYSTEM 
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- font weights
+Defult value:400
+Medium-500
+Semi Bold-600
+Bold -700
+
+- line heights
+Default values :1
+Small - 1.05
+medium -1.2
+Paragraph Default - 1.6
+
+- Letter Spacing
+- -0.5px
+- 0.75px
+
+ --- COLORS
+
+ primary Color:#e67e22
+
+ - Tints:(ligher Version)#fdf2e9
+ #f1d4bc
+#eb984e
+ 
+ - Shades:(darker Version) #cf711f  #45260a
+ - Accents:(Related to Oppostie Version)
+ #888
+ #767676(this is ligest grey allowed on white)
+ #6f6f6f
+ - Greys:(lighter version of Dark) #555  #333
+ lighest grey allowed on  #fdf2e9
+  
+ --- 03 IMAGES
+
+ --- 04 ICONS
+
+ --- 05 SHADOWS
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075)
+
+ --- 06 BORDER-RADIOUS
+ -Default: 9px 
+ Medium 11px
+
+ --- 07 WHITE SPACES
+
+ - Spacing System(PX)
+ 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* if we set root font size as 10px hereafter it won'b be 16px  */
+html {
+  /* font-size: 10px; */
+  /* Now 1 rem =>10px only  */
+  /* Percentage of user's font size */
+  /* default value 16px our seting values for root element 10px */
+  /* 16/10 =>0.625 ==> 62.5% */
+  /* it will automtaticalculate the values based on user preperance */
+  /* if they set 12*o,625  , then 1 rem equals to 7.5px*/
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* it doesn't work in safari and microsoft edge */
+  /* scroll-behavior: smooth; */
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  /* only work if there's nothing absolutly position in relation to body */
+  overflow-x: hidden;
+}
+/********************************/
+/* General Resualbe Components */
+/********************************/
+/* Centering container class */
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  /* margin-bottom: 9.6rem; */
+}
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+/* this mean 9.6 rem margin not using for last element */
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+.grid--center-v {
+  align-items: center;
+}
+.grid--2--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3--cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4--cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+/* .grid--5--cols {
+  grid-template-columns: repeat(5, 1fr);
+} */
+.heading-primary,
+.secondary-heading,
+.heading-tertiary {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  /* color: #2e1907; */
+  /* color: #45260a;
+  color: #343a40; */
+  color: #333;
+}
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+.secondary-heading {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.subheading {
+  /* because span is inline elemenet */
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  /* transition: all 1s; */
+  /* put transition on original "state" */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
+  /* only neccessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+  color: #fff;
+}
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  color: #555;
+  /* it will jump when we hover the button */
+  /* border: 3px solid #fff; */
+  /* tricks to add border inside the button */
+  box-shadow: inset 0 0 0 3px #fff;
+  /* 1.horizontal 2.Vertical 3.blur 4.scale 5.color */
+}
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+/* Helper/Setting Classes */
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22;
+  outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+/* sm- small */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+/* md - medium */
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+.center-text {
+  text-align: center;
+}
+strong {
+  font-weight: 500;
+}
