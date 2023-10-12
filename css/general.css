@@ -194,7 +194,7 @@ body {
   /* border: 3px solid #fff; */
   /* tricks to add border inside the button */
   box-shadow: inset 0 0 0 3px #fff;
-  /* 1.horizontal 2.Vertical 3.blur 4.scale 5.color */
+  /* 1.horizontal(off-set x) 2.Vertical(off-set y) 3.blur-radius 4.spread-radius 5.color */
 }
 .btn--form {
   background-color: #45260a;
