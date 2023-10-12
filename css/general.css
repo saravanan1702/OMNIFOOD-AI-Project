@@ -99,6 +99,7 @@ body {
   margin-bottom: 0;
 } */
 /* this mean 9.6 rem margin not using for last element */
+/*Aplly all the bottom except last child element*/
 .grid:not(:last-child) {
   margin-bottom: 9.6rem;
 }
