@@ -136,9 +136,11 @@ Instead, 1rem=1em=16px */
     /* Hide Navigation */
     /* allows no transtion at all */
     /* display: none; */
+     /*the reason we never use display none in quries we can't animate the elements*/
 
     /* we can hide nav bar in multiple way */
     /* 1.hide nav visually */
+    /*Physically it is exits visiually it's look disappear */
     opacity: 0;
     /* 2.Make it Unaccessble to mouch and keyboard  */
     pointer-events: none;
