@@ -65,7 +65,7 @@ html {
   /* default value 16px our seting values for root element 10px */
   /* 10/16 =>0.625 ==> 62.5% */
   /* it will automtaticalculate the values based on user preperance */
-  /* if they set 12*o,625  , then 1 rem equals to 7.5px*/
+  /* if they set 12*0.625  , then 1 rem equals to 7.5px*/
   font-size: 62.5%;
   overflow-x: hidden;
   /* it doesn't work in safari and microsoft edge */
